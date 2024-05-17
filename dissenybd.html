@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecte App M03</title>
+    <title>Projecte AppActivitats</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Projecte App M03</h1>
+        <h1>Projecte AppActivitats</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="descripcio_objectius.html">Descripció i objectius del projecte</a></li>
+            <li><a href="index.html">Descripció i objectius del projecte</a></li>
             <li><a href="cronograma.html">Cronograma del projecte</a></li>
             <li><a href="dissenybd.html">Disseny de BD</a></li>
             <li><a href="uml.html">UML</a></li>
@@ -23,25 +23,50 @@
         </ul>
     </nav>
     <main>
-        <section id="diseny-bd">
+        <section id="disseny-bd">
             <h2>Disseny de BD</h2>
-            <h3>Model conceptual (Diagrama E-R)</h3>
-            <p></p>
-            <img src="imatges/Model_E-R_ProjecteM03.jpg" />
-            <h3>Model lògic-relacional</h3>
-            <p>Descripció del model lògic-relacional.</p>
-            <h3>Disseny físic</h3>
-            <p>Script DDL SQL i SQL per a proves (inserts).</p>
-            <h3>Creació de taules</h3>
-            <img src="imatges/Bd_sql.png">
-            <h3>Inserts</h3>
-            <img src="imatges/Inserts_taula_activitats.png">
+
+            <div class="bd-section">
+                <h3>Model conceptual (Diagrama E-R)</h3>
+                <img src="imatges/ModelE-R_M03App.drawio.png" alt="Model E-R">
+                <p>El model E-R representa les entitats i les seves relacions per a la nostra aplicació de gestió
+                    d'activitats.</p>
+            </div>
+
+            <div class="bd-section">
+                <h3>Model lògic-relacional</h3>
+                <img src="imatges/Disseny_Logic_APPM03.drawio.png" alt="Model lògic-relacional">
+                <p>El model lògic-relacional descriu com les dades es mapegen a taules i relacions en el sistema de
+                    bases de dades.</p>
+            </div>
+
+            <div class="bd-section">
+                <h3>Disseny físic</h3>
+                <p>El disseny físic inclou l'script DDL SQL per a la creació de taules i els scripts SQL per a les
+                    proves (inserts).</p>
+            </div>
+
+            <div class="bd-section">
+                <h3>Creació de taules</h3>
+                <img src="imatges/Bd_sql.png" alt="Creació de taules">
+                <p>Aquesta imatge mostra l'script SQL utilitzat per crear les taules necessàries en la base de dades.
+                </p>
+            </div>
+
+            <div class="bd-section">
+                <h3>Inserts</h3>
+                <img src="imatges/Inserts_activitats.png" alt="Inserts d'activitats">
+                <p>Inserts d'activitats per a poblar la taula d'activitats amb dades de prova.</p>
+                <img src="imatges/Inserts_horaris_1.png" alt="Inserts d'horaris (1)">
+                <p>Primera part dels inserts per a la taula d'horaris.</p>
+                <img src="imatges/Inserts_horaris_2.png" alt="Inserts d'horaris (2)">
+                <p>Segona part dels inserts per a la taula d'horaris.</p>
+            </div>
 
         </section>
-
     </main>
     <footer>
-        <p>Drets reservats &copy; 2024</p>
+        <p>Copyright © 2024 Pau Viejo Herrero DAM 1A.</p>
     </footer>
 </body>
 

@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecte App M03</title>
+    <title>Projecte AppActivitats</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Projecte App M03</h1>
+        <h1>Projecte AppActivitats</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="descripcio_objectius.html">Descripció i objectius del projecte</a></li>
+            <li><a href="index.html">Descripció i objectius del projecte</a></li>
             <li><a href="cronograma.html">Cronograma del projecte</a></li>
             <li><a href="dissenybd.html">Disseny de BD</a></li>
             <li><a href="uml.html">UML</a></li>
@@ -23,27 +23,50 @@
         </ul>
     </nav>
     <main>
-
         <section id="incidents">
             <h2>Incidents i problemes</h2>
             <p>Descripció dels problemes trobats i com es van resoldre.</p>
-            <p>Problemas:
 
+            <div class="incident">
+                <h3>Error Mojo</h3>
+                <p><strong>Descripció:</strong> L'error Mojo es va produir perquè referenciava un mètode al controlador.
+                    L'assignava a un botó per aquest mètode i utilitzava un altre mètode sense cridar al model.
+                    Necessitava agafar dades que es troben al controlador amb el .gettext dels camps als quals no podia
+                    accedir el model.</p>
+                <p><strong>Solució:</strong> Reestructuració i modificació del mètode iniciar sessió.</p>
+            </div>
 
-                L'error Mojo, era causat perque referenciava a un mètode al controlador, l'assigno a un botó per aquest mètode i feia servir a dins un altre mètode sense cridar al model, i necessitava agafar dades que es troben al controlador amb el .gettext dels camps als quals no podia accedir el model.
-                
-                Ha sigut arreglat mitjançant una reestructuració i modificació del mètode iniciar sesió.
-                
-                Nou error, a l’ordinador de l'aula, error 134, fins i tot em genera un registre o log de detalls amb l’error, des de l’ordinador de casa el projecte funciona perfectament. Sembla ser un conflicte amb les diferents versions de JDK.
-                
-                Complicació a l’hora d'aconseguir l’idUsuari, el qual necessito per a la majoria dels meus mètodes. Encara que, tenint en compte que al meu disseny el correu és únic a la bd, també es podria buscar per correu.
-                El mètode no funciona.
-                </p>
+            <div class="incident">
+                <h3>Error 134 a l’ordinador de l'aula</h3>
+                <p><strong>Descripció:</strong> A l'ordinador de l'aula, es produïa l'error 134, generant un registre o
+                    log de detalls amb l’error. Des de l’ordinador de casa el projecte funcionava perfectament. Sembla
+                    ser un conflicte amb les diferents versions de JDK.</p>
+                <p><strong>Solució:</strong> Canviar d’ordinador i actualitzar la versió JDK del que utilitzo
+                    habitualment. Tot i que de moment segueix sense executar a aquest mateix ordinador.</p>
+            </div>
+
+            <div class="incident">
+                <h3>Complicació amb l’idUsuari</h3>
+                <p><strong>Descripció:</strong> Complicació a l’hora d'aconseguir l’idUsuari, el qual necessito per a la
+                    majoria dels meus mètodes. Encara que, tenint en compte que al meu disseny el correu és únic a la
+                    BD, també es podria buscar per correu. El mètode no funcionava perquè es creava un nou model cada
+                    vegada, esborrant l’anterior.</p>
+                <p><strong>Solució:</strong> Implantar el mètode d'injectar codi i establir totes les referències de
+                    model als controladors corresponents a la classe App.java.</p>
+            </div>
+
+            <div class="incident">
+                <h3>Errors a les dependències amb JavaFX</h3>
+                <p><strong>Descripció:</strong> Errors a l’hora d'importar controls de JavaFX com ListView,
+                    ObservableList, etc. No es podia fer ús de diversos controls.</p>
+                <p><strong>Solució:</strong> Eliminar unes dependències no necessàries al pom.xml, específicament
+                    javafx-web, les quals causaven conflictes amb la resta de dependències de JavaFX.</p>
+            </div>
+
         </section>
-
     </main>
     <footer>
-        <p>Drets reservats &copy; 2024</p>
+        <p>Copyright © 2024 Pau Viejo Herrero DAM 1A.</p>
     </footer>
 </body>
 

@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecte App M03</title>
+    <title>Projecte AppActivitats</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Projecte App M03</h1>
+        <h1>Projecte AppActivitats</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="descripcio_objectius.html">Descripció i objectius del projecte</a></li>
+            <li><a href="index.html">Descripció i objectius del projecte</a></li>
             <li><a href="cronograma.html">Cronograma del projecte</a></li>
             <li><a href="dissenybd.html">Disseny de BD</a></li>
             <li><a href="uml.html">UML</a></li>
@@ -23,28 +23,114 @@
         </ul>
     </nav>
     <main>
-
         <section id="manual">
             <h2>Manual bàsic d'ús</h2>
-            <h3>Descripció de com usar l'aplicació amb captures de pantalla.<h3>
-                    <p>Inici de Sessió: Aquesta vista conté un formulari perquè els usuaris iniciïn sessió amb el seu
-                        correu electrònic i contrasenya.
+            <h3>Descripció de com fer ús de l'aplicació amb captures de pantalla.</h3>
 
-                        Registre de Nous Usuaris: Aquesta vista permet als nous usuaris registrar-se proporcionant el
-                        seu nom, correu electrònic i contrasenya.
+            <div class="manual-section" id="login">
+                <h4>Inici de Sessió</h4>
+                <p>
+                    En accedir a l’aplicació, se t’obrirà la vista "Inici de Sessió".
+                    Introdueix el teu correu electrònic i la contrasenya associada al teu compte.
+                    Feu clic al botó "Iniciar Sessió" per validar les vostres credencials.
+                    Si les credencials són correctes, sereu redirigits a la vista principal de l'aplicació.
+                    Si les credencials són incorrectes, es mostrarà un missatge d'error.
+                    Si encara no teniu compte, haureu registrar un nou usuari des de la pantalla de Registre.
+                    Ho podeu fer fent clic al botó "Registrar-me".
+                </p>
+                <img src="imatges/APP Pantalla principal.png" alt="Pantalla Principal">
+                <img src="imatges/APP IniciSessio.png" alt="Pantalla d'Inici de Sessió">
+            </div>
 
-                        Visualització d'Activitats / Detall d'Activitat / Confirmació de Registre d'Usuari: Aquesta
-                        vista mostra la llista d'activitats disponibles i permet veure els detalls d'una activitat
-                        específica. També inclou l'opció de registrar-se en una activitat seleccionada.
+            <div class="manual-section" id="register">
+                <h4>Registre de Nous Usuaris</h4>
+                <p>
+                    Accedeix a la vista "Registre" de l'aplicació.
+                    Omple els camps obligatoris com el nom, el correu electrònic i la contrasenya.
+                    Fes clic al botó "Registrar-me" per registrar el nou usuari.
+                    Si el correu electrònic ja està registrat o deixeu algun camp buit, es mostrarà un missatge d'error.
+                    Si el registre és exitós, es mostrarà un missatge en pantalla confirmant aquesta acció, que el
+                    vostre usuari s'ha creat/registrat correctament.
+                </p>
+                <img src="imatges/APP Registre.png" alt="Pantalla de Registre">
+            </div>
 
-                        Perfil d'Usuari / Activitats Apuntades per l'Usuari: Aquesta vista mostra el perfil de l'usuari,
-                        incloent la informació personal i les activitats a les quals està apuntat.
-                    </p>
+            <div class="manual-section" id="activities">
+                <h4>Visualització d'Activitats</h4>
+                <p>
+                    Accedeix a la vista "Visualització d'Activitats" identificada com "Apunta't a les nostres
+                    activitats!" per veure la llista d'activitats disponibles.
+                    Les activitats es filtren automàticament per dia de la setmana un cop escolliu una activitat en
+                    concret per veure els horaris, és a dir se us mostren els dies i hores que hi ha disponibles per
+                    a realitzar aquesta activitat
+                    en una setmana.
+                    Quan s'obre el desplegable, podeu veure el nom de cada activitat juntament amb la seva descripció.
+                    Quan escolliu un horari concret, heu de fer clic al botó "Apuntar-me" per registrar-vos a
+                    l'activitat seleccionada.
+                    Després de fer clic al botó "Apuntar-me", si l'acció és exitosa, es mostrarà un missatge de
+                    confirmació.
+                    Des d'aquesta pantalla o vista, pots accedir al teu perfil fent clic al botó "Anar al meu perfil",
+                    on trobaràs una varietat d'opcionns, a més de poder consultar a quines activitats et trobes apuntat
+                    actualment
+                </p>
+                <img src="imatges/APP Pantalla principal_mostra_horaribuit.png" alt="Activitats per Hora">
+                <img src="imatges/APP pantalla-principal_escolliract.png" alt="Detall de l'Activitat">
+                <img src="imatges/APP Pantalla principal_selecciohorari.png" alt="Selecció d'Horari">
+
+
+            </div>
+
+            <div class="manual-section" id="user-profile">
+                <h4>Perfil d'Usuari</h4>
+                <p>
+                    Si accediu a la vista "Perfil d'Usuari" podreu trobar la vostra informació personal i les activitats
+                    a les
+                    quals esteu apuntat.
+                    Podeu veure les activitats a les quals esteu apuntat i teniu l'opció de cancel·lar la vostra
+                    participació.
+                    En la vista de perfil d'usuari, també podeu modificar les vostres dades personals, com el nom, el
+                    correu electrònic o la contrasenya.
+                    L'acció es confirma fent clic al botó "Modificar".
+                    En fer clic, si les dades es modifiquen correctament a la nostra base de dades, es mostrarà un
+                    missatge a la pantalla confirmant aquesta acció. En cas contrari, es mostrarà un missatge d'error.
+                    Si voleu eliminar el vostre compte, podeu fer-ho des de la vista de perfil d'usuari, fent clic a
+                    l'opció "Esborrar compte", just a sota del text que pregunta "Vols donarte de baixa?".
+                    Després de confirmar la baixa del compte, tota la informació associada amb el vostre compte serà
+                    eliminada i es tancarà la sessió automàticament, és a dir, que l'app us portarà a la vista inicial
+                    "Iniciar Sessió".
+                    A aquesta vista també podreu trobar el botó de "Tancar sessió", el qual us permet tornar a la vista
+                    principal de "Inici de Sessió", i les dades del vostre usuari (identificador) s'esborren de la
+                    memòria i deixen d'estar disponibles a la sessió actual de l'app.
+                    En cas que volgueu tornar a la vista anterior i apuntar-vos a una altre activitat, podeu fer clic al
+                    botó "Apuntar-se a activitats" in tornareu a la vista anterior.
+                </p>
+                <img src="imatges/APP Pantalla perfil.png" alt="Perfil d'Usuari">
+                <img src="imatges/APP Perfil confirmacio_mod_dades.png" alt="Confirmació de Modificació de Dades">
+                <img src="imatges/APP Perfil_confdesapuntarse.png" alt="Desapuntar-se d'una Activitat">
+            </div>
+
+            <div class="manual-section" id="consult-activities">
+                <h4>Consulta d'Activitats Inscrites</h4>
+                <p>
+                    Per veure les activitats a les quals estàs inscrit, fes clic a l'opció "El Meu Perfil" situada a la
+                    part superior de la pàgina.
+                    Aquí trobaràs una llista de les teves activitats inscrites juntament amb altres detalls.
+                    A més, aquí és on trobaràs l'opciò per a poder esborrar-te/desapuntar-te d'alguna activitat, bé
+                    perquè no podràs acudir, o per la raó que sigui.
+                    Per a fer-ho, hauras de fer clic al desplegable i escollir una de les opcions, una activitat amb el
+                    seu dia i hora de realització.
+                    Un cop hagis escollit l'activitat, hauràs de fer clic al botó "Desapuntar-me" per a fer efectiva
+                    l'eliminació del teu usuari de l'activitat en qüestió. Si l'acció és exitosa, es mostrarà un
+                    missatge de
+                    confirmació. En cas contrari, apareixerà a pantalla un missatge d'error, si per exemple, t'acabes
+                    d'esborrar prèviamnet de la mateixa activitat dirigida.
+                    <img src="imatges/APP Pantalla perfil.png" alt="Perfil d'Usuari">
+                </p>
+            </div>
         </section>
-
     </main>
     <footer>
-        <p>Drets reservats &copy; 2024</p>
+        <p>Copyright © 2024 Pau Viejo Herrero DAM 1A.</p>
     </footer>
 </body>
 
